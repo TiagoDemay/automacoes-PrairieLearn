@@ -1,0 +1,44 @@
+name: Atualizar infoAssessment manualmente
+
+on:
+  workflow_dispatch:
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar este repositório de automação
+        uses: actions/checkout@v3
+
+      - name: Instalar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      - name: Exportar token do PrairieLearn
+        run: echo "PL_TOKEN=${{ secrets.PL_TOKEN }}" >> $GITHUB_ENV
+
+      - name: Baixar gradebook e gerar aprovados
+        run: |
+          python3 pl_gradebook/baixar_gradebook.py -i 177658 -r Roteiro1 Roteiro2 Roteiro3 Roteiro4
+
+      - name: Clonar repositório do curso
+        run: |
+          git clone https://x-access-token:${{ secrets.GH_PAT }}@github.com/PrairieLearn/pl-insper-nccc101.git curso
+
+      - name: Atualizar arquivos infoAssessment
+        run: |
+          python3 pl_gradebook/atualizar_allow_access.py
+
+      - name: Commit e push no repositório do curso
+        run: |
+          cd curso
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add courseInstances/CompNuvem-2025a/assessments/arguicao*/infoAssessment.json
+          git commit -m "Atualização automática de infoAssessment via automacoes-pl" || echo "Sem mudanças"
+          git push
