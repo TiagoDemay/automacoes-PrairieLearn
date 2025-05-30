@@ -1,12 +1,16 @@
-name: Atualizar infoAssessment manualmente
+name: Atualizar ExamN, baseado na nota dos alunos 
 
 on:
   workflow_dispatch:
     inputs:
       course_instance_id:
-        description: "ID da instância do curso"
+        description: "ID da instância do curso (ex: 177658)"
         required: true
-        default: "183829"
+        default: "177658"
+      curso:
+        description: "Nome do diretório do curso (ex: CompNuvem-2025a)"
+        required: true
+        default: "CompNuvem-2025a"
 
 
 jobs:
@@ -25,8 +29,10 @@ jobs:
       - name: Instalar dependências
         run: pip install -r requirements.txt
 
-      - name: Exportar token do PrairieLearn
-        run: echo "PL_TOKEN=${{ secrets.PL_TOKEN }}" >> $GITHUB_ENV
+      - name: Exportar variáveis para os scripts
+        run: |
+          echo "PL_TOKEN=${{ secrets.PL_TOKEN }}" >> $GITHUB_ENV
+          echo "CURSO=${{ github.event.inputs.curso }}" >> $GITHUB_ENV
 
       - name: Baixar gradebook e gerar aprovados
         run: |

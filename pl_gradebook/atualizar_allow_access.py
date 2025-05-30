@@ -44,12 +44,15 @@ def atualizar_allow_access(exam_path, aprovados_path, output_path):
 
     salvar_json(exam_data, output_path)
 
+
+CURSO = os.getenv("CURSO") or "CompNuvem-2025a"  # fallback por segurança
+
 def main():
     for i in range(1, 5):
         atualizar_allow_access(
             f"pl_gradebook/exam{i}.json",
             f"pl_gradebook/aprovados_roteiro{i}.json",
-            f"curso/courseInstances/CompNuvem-2025a/assessments/arguicao{i}/infoAssessment.json"
+            f"curso/courseInstances/{CURSO}/assessments/arguicao{i}/infoAssessment.json"
         )
 
 if __name__ == "__main__":
