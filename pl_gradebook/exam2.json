@@ -1,0 +1,74 @@
+{
+  "uuid": "93ece1db-44a9-4758-b5bc-0cc209399191",
+  "type": "Exam",
+  "title": "Arguicao-02",
+  "set": "Exam",
+  "number": "2",
+  "allowAccess": [
+  ],
+  "zones": [
+    {
+      "title": "Questão de infraestrtutura",
+      "comment": "Questões para validar conhecimentos de infraestrutura",
+      "questions": [
+        { "numberChoose": 1, "autoPoints": 10, "alternatives": [
+          { "id": "inquiry/juju/used_for" },
+          { "id": "inquiry/juju/install_pre_maas" },
+          { "id": "inquiry/juju/install_command" },
+          { "id": "inquiry/juju/integration_maas" },
+          { "id": "inquiry/juju/integration_maas_add" },
+          { "id": "inquiry/juju/integration_maas_credential" },
+          { "id": "inquiry/juju/integration_maas_credential_add" },
+          { "id": "inquiry/juju/install_bootstrap" },
+          { "id": "inquiry/juju/controller_status" },
+          { "id": "inquiry/juju/install_bootstrap_process" },
+          { "id": "inquiry/juju/controller_machine" },
+          { "id": "inquiry/juju/diff_to_ansible" }
+        ] }
+      ]
+    },
+    {
+      "title": "Questão de teoria",
+      "comment": "Questões para validar conhecimentos de teoria",
+      "questions": [
+        {
+          "numberChoose": 1,
+          "autoPoints": 10,
+          "alternatives": [
+            { "id": "lab/ipv4/binary" },
+            { "id": "lab/ipv4/prefix" },
+            { "id": "lab/ipv4/add_net" },
+            { "id": "lab/static/match_rule" },
+            { "id": "lab/static/network_lpm" },
+            { "id": "lab/static/mac_segs" },
+            { "id": "lab/static/mac_network" },
+            { "id": "lab/static/if_direct" },
+            { "id": "lab/static/add_rule" },
+            { "id": "lab/ipv4/pre_nhosts" },
+            { "id": "lab/ipv4/sub_design" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Questão da aplicação",
+      "comment": "Questões para validar conhecimentos da aplicação utilizada neste roteiro",
+      "questions": [
+        { "numberChoose": 1, "autoPoints": 10, "alternatives": [
+          { "id": "inquiry/juju/app_grafana_used_for" },
+          { "id": "inquiry/juju/app_prometheus_used_for" },
+          { "id": "inquiry/juju/models_list" },
+          { "id": "inquiry/juju/model_change" },
+          { "id": "inquiry/juju/grafana_from_charm" },
+          { "id": "inquiry/juju/prometheus_deploy" },
+          { "id": "inquiry/juju/monitoring" },
+          { "id": "inquiry/juju/controller_destroy" },
+          { "id": "inquiry/juju/maas_integration" },
+          { "id": "inquiry/juju/app_grafana_prometheus" },
+          { "id": "inquiry/juju/app_grafana_access" },
+          { "id": "inquiry/juju/integrate_used_for" }
+        ] }
+      ]
+    }
+  ]
+}

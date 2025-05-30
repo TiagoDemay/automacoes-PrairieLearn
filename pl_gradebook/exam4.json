@@ -1,0 +1,66 @@
+{
+  "uuid": "2d2df803-0960-4e2a-9351-997c21a8f30c",
+  "type": "Exam",
+  "title": "Arguicao-04",
+  "set": "Exam",
+  "number": "4",
+  "allowAccess": [
+  ],
+  "zones": [
+    {
+      "title": "Questão de infraestrtutura",
+      "comment": "Questões para validar conhecimentos de infraestrutura",
+      "questions": [
+        { "numberChoose": 1, "autoPoints": 10, "alternatives": [
+          { "id": "inquiry/openstack/iac" },
+          { "id": "inquiry/openstack/terraform_stages" },
+          { "id": "inquiry/openstack/terraform_tfstate" },
+          { "id": "inquiry/openstack/sla_vs_dr" },
+          { "id": "inquiry/openstack/keystone_domain" },
+          { "id": "inquiry/openstack/role" }
+        ] }
+      ]
+    },
+    {
+      "title": "Questão de teoria",
+      "comment": "Questões para validar conhecimentos de teoria",
+      "questions": [
+        {
+          "numberChoose": 1,
+          "autoPoints": 10,
+          "alternatives": [
+            { "id": "lec/nic/action_on_rx" },
+            { "id": "lec/nic/action_on_tx" },
+            { "id": "lec/arp/match_type" },
+            { "id": "lec/arp/header_fields" },
+            { "id": "lec/arp/proxy_arp" },
+            { "id": "lec/bridge/learning" },
+            { "id": "lab/arp/req_reply_fields" },
+            { "id": "lab/arp/updates" },
+            { "id": "lab/arp/no_entry" },
+            { "id": "lab/arp/with_entry" },
+            { "id": "lab/arp/single_seg" },
+            { "id": "lab/bridge/address" },
+            { "id": "lab/bridge/frame_one" },
+            { "id": "lab/bridge/learning" },
+            { "id": "lab/bridge/frame_seq" },
+            { "id": "lab/bridge/segment" }            
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Questão da aplicação",
+      "comment": "Questões para validar conhecimentos sobre aplicações",
+      "questions": [
+        { "numberChoose": 1, "autoPoints": 10, "alternatives": [
+          { "id": "inquiry/openstack/terraform_project" },
+          { "id": "inquiry/openstack/terraform_provider_tf" },
+          { "id": "inquiry/openstack/terraform_network_tf" },
+          { "id": "inquiry/openstack/security_group_ssh_icmp" },
+          { "id": "inquiry/openstack/terraform_keypair" }
+        ] }
+      ]
+    }
+  ]
+}

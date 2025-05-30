@@ -1,0 +1,84 @@
+{
+    "uuid": "29765e71-5f5a-4597-a53a-4f8927a0367a",
+    "type": "Exam",
+    "title": "Arguicao-01",
+    "set": "Exam",
+    "number": "1",
+    "allowAccess": [
+      
+    ],
+    "zones": [
+      {
+        "title": "Questão de infraestrtutura",
+        "comment": "Questões para validar conhecimentos de infraestrutura",
+        "questions": [
+          {
+            "numberChoose": 1,
+            "autoPoints": 10,
+            "alternatives": [
+              { "id": "inquiry/baremetal/what_is" },
+              { "id": "inquiry/main/hostname" },
+              { "id": "inquiry/maas/used_for" },
+              { "id": "inquiry/maas/installation" },
+              { "id": "inquiry/main/ip_address" },
+              { "id": "inquiry/main/access/ssh" },
+              { "id": "inquiry/maas/initialization"},
+              { "id": "inquiry/maas/dns"},
+              { "id": "inquiry/maas/range_dhcp"},
+              { "id": "inquiry/maas/ssh/import_public_key" },
+              { "id": "inquiry/maas/ovs" },
+              { "id": "inquiry/main/ssh/port" },
+              { "id": "inquiry/router/lan/ip_address" }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Questão de teoria",
+        "comment": "Questões para validar conhecimentos de teoria",
+        "questions": [
+          {
+            "numberChoose": 1,
+            "autoPoints": 10,
+            "alternatives": [
+              { "id": "lec/stack/layer_order" },
+              { "id": "lec/stack/layer_functions" },
+              { "id": "lec/encapsulation/headers" },
+              { "id": "lec/encapsulation/graphical" },
+              { "id": "lec/encapsulation/size" },
+              { "id": "lec/encapsulation/cross_net" },
+              { "id": "lec/stack/identifiers" },
+              { "id": "lec/demux/identifier_purpose" },
+              { "id": "lec/stack/mac_address" },
+              { "id": "lec/demux/port_no" }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Questão da aplicação",
+        "comment": "Questões para validar conhecimentos da aplicação utilizada neste roteiro",
+        "questions": [
+          {
+            "numberChoose": 1,
+            "autoPoints": 10,
+            "alternatives": [
+              { "id": "inquiry/app/django_installation" },
+              { "id": "inquiry/app/postgre_create_user" },
+              { "id": "inquiry/app/postgre_setup_remote_access" },
+              { "id": "inquiry/app/postgre_port" },
+              { "id": "inquiry/app/postgre_status" },
+              { "id": "inquiry/app/maas_reserve_machine" },
+              { "id": "inquiry/app/django_deploy_ansible" },
+              { "id": "inquiry/app/django_remote_access_ssh_tunnel" },
+              { "id": "inquiry/app/nginx_balancer_main_advantage" },
+              { "id": "inquiry/app/nginx_balancer_config" },
+              { "id": "inquiry/app/nginx_balancer_expected_behaviour" },
+              { "id": "inquiry/app/last_mile_script_1" }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

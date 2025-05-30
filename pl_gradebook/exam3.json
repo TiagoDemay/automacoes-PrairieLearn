@@ -1,0 +1,78 @@
+{
+  "uuid": "d0695dc2-84c9-43f4-90b7-bc821ca0e56c",
+  "type": "Exam",
+  "title": "Arguicao-03",
+  "set": "Exam",
+  "number": "3",
+  "allowAccess": [
+  ],
+  "zones": [
+    {
+      "title": "Questão de infraestrtutura",
+      "comment": "Questões para validar conhecimentos de infraestrutura",
+      "questions": [
+        { "numberChoose": 1, "autoPoints": 10, "alternatives": [
+          { "id": "inquiry/openstack/juju" },
+          { "id": "inquiry/openstack/deploy_lxd" },
+          { "id": "inquiry/openstack/ceph_osd_erro" },
+          { "id": "inquiry/openstack/neutron_yaml" },
+          { "id": "inquiry/openstack/vault_gen_ca" },
+          { "id": "inquiry/openstack/glance_what_is" },
+          { "id": "inquiry/openstack/juju_add_model" },
+          { "id": "inquiry/openstack/keystone_what_is" },
+          { "id": "inquiry/openstack/nova_compute_what_is" },
+          { "id": "inquiry/openstack/cinder_what_is" },
+          { "id": "inquiry/openstack/neutron_what_is" },
+          { "id": "inquiry/openstack/horizon_what_is" },
+          { "id": "inquiry/openstack/vault_what_is" },
+          { "id": "inquiry/openstack/ceph_what_is"},
+          { "id": "inquiry/openstack/placement_what_is"},
+          { "id": "inquiry/openstack/rabbitmq_what_is"},
+          { "id": "inquiry/openstack/openrc_what_is"},
+          { "id": "inquiry/openstack/openstack_service_list"},
+          { "id": "inquiry/openstack/flavor_what_is"},
+          { "id": "inquiry/openstack/glance_image"},
+          { "id": "inquiry/openstack/horizon_key_pair"},
+          { "id": "inquiry/openstack/external_internal_networks"},
+          { "id": "inquiry/openstack/floating_ip" },
+          { "id": "inquiry/openstack/nova_compute_add_unit" },
+          { "id": "inquiry/openstack/ceph_osd_add_unit" },
+          { "id": "inquiry/openstack/horizon_network_topology" }
+        ] }
+      ]
+    },
+    {
+      "title": "Questão de teoria",
+      "comment": "Questões para validar conhecimentos de teoria",
+      "questions": [
+        {
+          "numberChoose": 1,
+          "autoPoints": 10,
+          "alternatives": [
+            { "id": "lec/nat/hosts_in_private"},
+            { "id": "lab/nat/conn_establish"},
+            { "id": "lab/nat/table_address"},
+            { "id": "lab/nat/net_address"},
+            { "id": "lab/ntp/compute"},
+            { "id": "lab/http/boot_get_sections"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Questão da aplicação",
+      "comment": "Questões para validar conhecimentos sobre aplicações",
+      "questions": [
+        { "numberChoose": 1, "autoPoints": 10, "alternatives": [
+          { "id": "inquiry/openstack/app_load_balancer" },
+          { "id": "inquiry/openstack/app_api_cap" },
+          { "id": "inquiry/openstack/app_wm" },
+          { "id": "inquiry/openstack/app_flavor" },
+          { "id": "inquiry/openstack/app_high_demand" },
+          { "id": "inquiry/openstack/app_cost" },
+          { "id": "inquiry/openstack/app_private_cloud" }
+        ] }
+      ]
+    }
+  ]
+}
