@@ -2,6 +2,12 @@ name: Atualizar infoAssessment manualmente
 
 on:
   workflow_dispatch:
+    inputs:
+      course_instance_id:
+        description: "ID da instância do curso"
+        required: true
+        default: "183829"
+
 
 jobs:
   atualizar:
@@ -24,7 +30,7 @@ jobs:
 
       - name: Baixar gradebook e gerar aprovados
         run: |
-          python3 pl_gradebook/baixar_gradebook.py -i 177658 -r Roteiro1 Roteiro2 Roteiro3 Roteiro4
+          python3 pl_gradebook/baixar_gradebook.py -i ${{ github.event.inputs.course_instance_id }} -r Roteiro1 Roteiro2 Roteiro3 Roteiro4
 
       - name: Clonar repositório do curso
         run: |
