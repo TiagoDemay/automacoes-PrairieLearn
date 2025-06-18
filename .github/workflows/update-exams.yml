@@ -2,7 +2,7 @@ name: Atualizar Exams baseado nas notas dos alunos por módulo
 
 on:
   schedule:
-    - cron: "30 13 * * *"  # Roda todos os dias às 10:30 Br
+    - cron: "30 16 * * *"  # Roda todos os dias às 10:30 Br
   workflow_dispatch:
     inputs:
       course_instance_id:
@@ -22,6 +22,10 @@ env:
 jobs:
   atualizar:
     runs-on: ubuntu-latest
+
+    env:
+      COURSE_INSTANCE_ID: ${{ github.event.inputs.course_instance_id || secrets.DEFAULT_COURSE_INSTANCE_ID }}
+      CURSO: ${{ github.event.inputs.curso || secrets.DEFAULT_CURSO }}
 
     steps:
       - name: Clonar este repositório de automação
