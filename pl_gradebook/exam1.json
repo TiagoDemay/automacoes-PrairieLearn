@@ -27,7 +27,7 @@
         "questions": [
           {
             "numberChoose": 2,
-            "autoPoints": 20,
+            "autoPoints": 10,
             "alternatives": [
               { "id": "inquiry/baremetal/what_is" },
               { "id": "inquiry/main/hostname" },
@@ -51,7 +51,7 @@
         "questions": [
           {
             "numberChoose": 2,
-            "autoPoints": 20,
+            "autoPoints": 10,
             "alternatives": [
               { "id": "lec/stack/layer_order" },
               { "id": "lec/stack/layer_functions" },
@@ -73,7 +73,7 @@
         "questions": [
           {
             "numberChoose": 2,
-            "autoPoints": 20,
+            "autoPoints": 10,
             "alternatives": [
               { "id": "inquiry/app/django_installation" },
               { "id": "inquiry/app/postgre_create_user" },

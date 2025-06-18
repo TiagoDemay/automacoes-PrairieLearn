@@ -24,7 +24,7 @@
       "title": "Questão de infraestrtutura",
       "comment": "Questões para validar conhecimentos de infraestrutura",
       "questions": [
-        { "numberChoose": 2, "autoPoints": 20, "alternatives": [
+        { "numberChoose": 2, "autoPoints": 10, "alternatives": [
           { "id": "inquiry/openstack/iac" },
           { "id": "inquiry/openstack/terraform_stages" },
           { "id": "inquiry/openstack/terraform_tfstate" },
@@ -40,7 +40,7 @@
       "questions": [
         {
           "numberChoose": 2,
-          "autoPoints": 20,
+          "autoPoints": 10,
           "alternatives": [
             { "id": "lec/nic/action_on_rx" },
             { "id": "lec/nic/action_on_tx" },
@@ -60,7 +60,7 @@
       "title": "Questão da aplicação",
       "comment": "Questões para validar conhecimentos sobre aplicações",
       "questions": [
-        { "numberChoose": 2, "autoPoints": 20, "alternatives": [
+        { "numberChoose": 2, "autoPoints": 10, "alternatives": [
           { "id": "inquiry/openstack/terraform_project" },
           { "id": "inquiry/openstack/terraform_provider_tf" },
           { "id": "inquiry/openstack/terraform_network_tf" },
