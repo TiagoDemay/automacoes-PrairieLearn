@@ -2,7 +2,7 @@ name: Atualizar Exams baseado nas notas dos alunos por módulo
 
 on:
   schedule:
-    - cron: "30 16 * * *"  # Roda todos os dias às 10:30 Br
+    - cron: "00 15 * * *"  # Roda todos os dias às 12:00 Br
 
 jobs:
   atualizar:
