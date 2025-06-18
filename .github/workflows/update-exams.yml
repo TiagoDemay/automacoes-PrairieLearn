@@ -1,6 +1,8 @@
 name: Atualizar Exams baseado nas notas dos alunos por módulo
 
 on:
+  schedule:
+    - cron: "0 8 * * *"  # Roda todos os dias às 8:00 UTC
   workflow_dispatch:
     inputs:
       course_instance_id:
