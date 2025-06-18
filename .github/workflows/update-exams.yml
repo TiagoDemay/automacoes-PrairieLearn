@@ -2,7 +2,7 @@ name: Atualizar Exams baseado nas notas dos alunos por módulo
 
 on:
   schedule:
-    - cron: "0 8 * * *"  # Roda todos os dias às 8:00 UTC
+    - cron: "0 10 * * *"  # Roda todos os dias às 8:00 UTC
   workflow_dispatch:
     inputs:
       course_instance_id:
@@ -13,6 +13,11 @@ on:
         description: "Nome da pasta do curso (ex: CompNuvem-2025b)"
         required: true
         default: "CompNuvem-2025b"
+
+env:
+  COURSE_INSTANCE_ID: ${{ github.event.inputs.course_instance_id || '183202' }}
+  CURSO: ${{ github.event.inputs.curso || 'CompNuvem-2025b' }}
+
 
 jobs:
   atualizar:
