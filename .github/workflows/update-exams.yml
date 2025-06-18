@@ -3,29 +3,10 @@ name: Atualizar Exams baseado nas notas dos alunos por módulo
 on:
   schedule:
     - cron: "30 16 * * *"  # Roda todos os dias às 10:30 Br
-  workflow_dispatch:
-    inputs:
-      course_instance_id:
-        description: "ID da instância do curso (ex: 183202)"
-        required: true
-        default: "183202"
-      curso:
-        description: "Nome da pasta do curso (ex: CompNuvem-2025b)"
-        required: true
-        default: "CompNuvem-2025b"
-
-env:
-  COURSE_INSTANCE_ID: ${{ github.event.inputs.course_instance_id || '183202' }}
-  CURSO: ${{ github.event.inputs.curso || 'CompNuvem-2025b' }}
-
 
 jobs:
   atualizar:
     runs-on: ubuntu-latest
-
-    env:
-      COURSE_INSTANCE_ID: ${{ github.event.inputs.course_instance_id || secrets.DEFAULT_COURSE_INSTANCE_ID }}
-      CURSO: ${{ github.event.inputs.curso || secrets.DEFAULT_CURSO }}
 
     steps:
       - name: Clonar este repositório de automação
@@ -43,11 +24,12 @@ jobs:
       - name: Exportar variáveis para os scripts
         run: |
           echo "PL_TOKEN=${{ secrets.PL_TOKEN }}" >> $GITHUB_ENV
-          echo "CURSO=${{ github.event.inputs.curso }}" >> $GITHUB_ENV
+          echo "DEFAULT_CURSO=${{ secrets.DEFAULT_CURSO }}" >> $GITHUB_ENV
+          echo "COURSE_INSTANCE_ID=${{ secrets.DEFAULT_COURSE_INSTANCE_ID }}" >> $GITHUB_ENV
 
       - name: Baixar gradebook e gerar aprovados por módulo
         run: |
-          python3 baixar_e_filtrar_modulos.py -i ${{ github.event.inputs.course_instance_id }}
+          python3 baixar_e_filtrar_modulos.py -i ${{ secrets.DEFAULT_COURSE_INSTANCE_ID }}
 
       - name: Clonar repositório do curso
         run: |
@@ -61,7 +43,7 @@ jobs:
         run: |
           for i in 1 2 3 4
           do
-            cp pl_gradebook/exam${i}_atualizado.json curso/courseInstances/${{ github.event.inputs.curso }}/assessments/arguicao${i}/infoAssessment.json
+            cp pl_gradebook/exam${i}_atualizado.json curso/courseInstances/${{ secrets.DEFAULT_CURSO }}/assessments/arguicao${i}/infoAssessment.json
           done
 
       - name: Commit e push no repositório do curso
@@ -69,7 +51,7 @@ jobs:
           cd curso
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git add courseInstances/${{ github.event.inputs.curso }}/assessments/arguicao*/infoAssessment.json
+          git add courseInstances/${{ secrets.DEFAULT_CURSO }}/assessments/arguicao*/infoAssessment.json
           git commit -m "Atualização automática de infoAssessment via automacoes-pl" || echo "Sem mudanças"
           git push
 
