@@ -9,12 +9,25 @@
     ],
     "zones": [
       {
+        "title": "Questão de Checkpoint",
+        "comment": "questões para validar finalização do Roteiro 1",
+        "questions": [
+          {
+            "numberChoose": 5,
+            "autoPoints": 40,
+            "alternatives": [
+              { "id": "arguicao/check" }
+            ]
+          }
+        ]
+      }, 
+      {
         "title": "Questão de infraestrtutura",
         "comment": "Questões para validar conhecimentos de infraestrutura",
         "questions": [
           {
-            "numberChoose": 1,
-            "autoPoints": 10,
+            "numberChoose": 2,
+            "autoPoints": 20,
             "alternatives": [
               { "id": "inquiry/baremetal/what_is" },
               { "id": "inquiry/main/hostname" },
@@ -27,8 +40,7 @@
               { "id": "inquiry/maas/range_dhcp"},
               { "id": "inquiry/maas/ssh/import_public_key" },
               { "id": "inquiry/maas/ovs" },
-              { "id": "inquiry/main/ssh/port" },
-              { "id": "inquiry/router/lan/ip_address" }
+              { "id": "inquiry/main/ssh/port" }
             ]
           }
         ]
@@ -38,8 +50,8 @@
         "comment": "Questões para validar conhecimentos de teoria",
         "questions": [
           {
-            "numberChoose": 1,
-            "autoPoints": 10,
+            "numberChoose": 2,
+            "autoPoints": 20,
             "alternatives": [
               { "id": "lec/stack/layer_order" },
               { "id": "lec/stack/layer_functions" },
@@ -60,8 +72,8 @@
         "comment": "Questões para validar conhecimentos da aplicação utilizada neste roteiro",
         "questions": [
           {
-            "numberChoose": 1,
-            "autoPoints": 10,
+            "numberChoose": 2,
+            "autoPoints": 20,
             "alternatives": [
               { "id": "inquiry/app/django_installation" },
               { "id": "inquiry/app/postgre_create_user" },

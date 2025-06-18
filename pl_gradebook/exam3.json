@@ -8,10 +8,23 @@
   ],
   "zones": [
     {
+      "title": "Questão de Checkpoint",
+      "comment": "questões para validar finalização do Roteiro 3",
+      "questions": [
+        {
+          "numberChoose": 5,
+          "autoPoints": 40,
+          "alternatives": [
+            { "id": "arguicao/check" }
+          ]
+        }
+      ]
+    },   
+    {
       "title": "Questão de infraestrtutura",
       "comment": "Questões para validar conhecimentos de infraestrutura",
       "questions": [
-        { "numberChoose": 1, "autoPoints": 10, "alternatives": [
+        { "numberChoose": 2, "autoPoints": 20, "alternatives": [
           { "id": "inquiry/openstack/juju" },
           { "id": "inquiry/openstack/deploy_lxd" },
           { "id": "inquiry/openstack/ceph_osd_erro" },
@@ -46,8 +59,8 @@
       "comment": "Questões para validar conhecimentos de teoria",
       "questions": [
         {
-          "numberChoose": 1,
-          "autoPoints": 10,
+          "numberChoose": 2,
+          "autoPoints": 20,
           "alternatives": [
             { "id": "lec/nat/hosts_in_private"},
             { "id": "lab/nat/conn_establish"},
@@ -63,7 +76,7 @@
       "title": "Questão da aplicação",
       "comment": "Questões para validar conhecimentos sobre aplicações",
       "questions": [
-        { "numberChoose": 1, "autoPoints": 10, "alternatives": [
+        { "numberChoose": 2, "autoPoints": 20, "alternatives": [
           { "id": "inquiry/openstack/app_load_balancer" },
           { "id": "inquiry/openstack/app_api_cap" },
           { "id": "inquiry/openstack/app_wm" },

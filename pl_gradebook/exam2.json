@@ -8,10 +8,23 @@
   ],
   "zones": [
     {
+      "title": "Questão de Checkpoint",
+      "comment": "questões para validar finalização do Roteiro 2",
+      "questions": [
+        {
+          "numberChoose": 5,
+          "autoPoints": 40,
+          "alternatives": [
+            { "id": "arguicao/check" }
+          ]
+        }
+      ]
+    },   
+    {
       "title": "Questão de infraestrtutura",
       "comment": "Questões para validar conhecimentos de infraestrutura",
       "questions": [
-        { "numberChoose": 1, "autoPoints": 10, "alternatives": [
+        { "numberChoose": 2, "autoPoints": 20, "alternatives": [
           { "id": "inquiry/juju/used_for" },
           { "id": "inquiry/juju/install_pre_maas" },
           { "id": "inquiry/juju/install_command" },
@@ -32,8 +45,8 @@
       "comment": "Questões para validar conhecimentos de teoria",
       "questions": [
         {
-          "numberChoose": 1,
-          "autoPoints": 10,
+          "numberChoose": 2,
+          "autoPoints": 20,
           "alternatives": [
             { "id": "lab/ipv4/binary" },
             { "id": "lab/ipv4/prefix" },
@@ -54,7 +67,7 @@
       "title": "Questão da aplicação",
       "comment": "Questões para validar conhecimentos da aplicação utilizada neste roteiro",
       "questions": [
-        { "numberChoose": 1, "autoPoints": 10, "alternatives": [
+        { "numberChoose": 2, "autoPoints": 20, "alternatives": [
           { "id": "inquiry/juju/app_grafana_used_for" },
           { "id": "inquiry/juju/app_prometheus_used_for" },
           { "id": "inquiry/juju/models_list" },
