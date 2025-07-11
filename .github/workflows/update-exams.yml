@@ -43,7 +43,7 @@ jobs:
         run: |
           for i in 1 2 3 4
           do
-            cp pl_gradebook/exam${i}_atualizado.json curso/courseInstances/${{ secrets.DEFAULT_CURSO }}/assessments/arguicao${i}/infoAssessment.json
+            cp pl_gradebook/exam${i}_atualizado.json curso/courseInstances/${{ secrets.DEFAULT_CURSO }}/assessments/Quiz${i}/infoAssessment.json
           done
 
       - name: Commit e push no repositório do curso
@@ -51,7 +51,7 @@ jobs:
           cd curso
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git add courseInstances/${{ secrets.DEFAULT_CURSO }}/assessments/arguicao*/infoAssessment.json
+          git add courseInstances/${{ secrets.DEFAULT_CURSO }}/assessments/Quiz*/infoAssessment.json
           git commit -m "Atualização automática de infoAssessment via automacoes-pl" || echo "Sem mudanças"
           git push
 
