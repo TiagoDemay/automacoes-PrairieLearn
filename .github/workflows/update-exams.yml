@@ -3,7 +3,8 @@ name: Atualizar Exams baseado nas notas dos alunos por módulo
 on:
   schedule:
     - cron: "00 15 * * *"  # Roda todos os dias às 12:00 Br
-
+  workflow_dispatch:
+  
 jobs:
   atualizar:
     runs-on: ubuntu-latest
