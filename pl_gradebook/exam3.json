@@ -76,7 +76,7 @@
       "title": "Questão da aplicação",
       "comment": "Questões para validar conhecimentos sobre aplicações",
       "questions": [
-        { "numberChoose": 2, "autoPoints": 10, "alternatives": [
+        { "numberChoose": 1, "autoPoints": 10, "alternatives": [
           { "id": "inquiry/openstack/app_load_balancer" },
           { "id": "inquiry/openstack/app_api_cap" },
           { "id": "inquiry/openstack/app_wm" },
