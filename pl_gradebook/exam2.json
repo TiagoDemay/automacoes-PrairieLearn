@@ -67,7 +67,7 @@
       "title": "Questão da aplicação",
       "comment": "Questões para validar conhecimentos da aplicação utilizada neste roteiro",
       "questions": [
-        { "numberChoose": 2, "autoPoints": 10, "alternatives": [
+        { "numberChoose": 1, "autoPoints": 10, "alternatives": [
           { "id": "inquiry/juju/app_grafana_used_for" },
           { "id": "inquiry/juju/app_prometheus_used_for" },
           { "id": "inquiry/juju/models_list" },
