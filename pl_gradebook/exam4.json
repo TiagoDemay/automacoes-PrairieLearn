@@ -60,7 +60,7 @@
       "title": "Questão da aplicação",
       "comment": "Questões para validar conhecimentos sobre aplicações",
       "questions": [
-        { "numberChoose": 2, "autoPoints": 10, "alternatives": [
+        { "numberChoose": 1, "autoPoints": 10, "alternatives": [
           { "id": "inquiry/openstack/terraform_project" },
           { "id": "inquiry/openstack/terraform_provider_tf" },
           { "id": "inquiry/openstack/terraform_network_tf" },
