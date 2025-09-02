@@ -72,7 +72,7 @@
         "comment": "Questões para validar conhecimentos da aplicação utilizada neste roteiro",
         "questions": [
           {
-            "numberChoose": 2,
+            "numberChoose": 1,
             "autoPoints": 10,
             "alternatives": [
               { "id": "inquiry/app/django_installation" },
