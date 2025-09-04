@@ -36,7 +36,7 @@ def atualizar_allow_access(exam_path, aprovados_path, output_path):
             bloco = {
                 "uids": [email],
                 "startDate": "2025-01-16T08:00:00",
-                "endDate": "2025-06-11T18:00:00",
+                "endDate": "2025-11-26T18:00:00",
                 "password": gerar_senha_aleatoria(),
                 "timeLimitMin": 10,
                 "credit": 100
