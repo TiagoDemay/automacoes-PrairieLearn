@@ -65,9 +65,7 @@
             { "id": "lec/nat/hosts_in_private"},
             { "id": "lab/nat/conn_establish"},
             { "id": "lab/nat/table_address"},
-            { "id": "lab/nat/net_address"},
-            { "id": "lab/ntp/compute"},
-            { "id": "lab/http/boot_get_sections"}
+            { "id": "lab/nat/net_address"}
           ]
         }
       ]
