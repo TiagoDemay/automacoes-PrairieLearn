@@ -2,7 +2,7 @@ name: Atualizar Exams baseado nas notas dos alunos por módulo
 
 on:
   schedule:
-    - cron: "30 1 * 2 *"  # Roda todos os dias às 12:00 Br
+    - cron: "*/20 * * * *"    # Runs every 20 minutes
   workflow_dispatch:
   
 jobs:
