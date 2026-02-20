@@ -9,25 +9,12 @@
     ],
     "zones": [
       {
-        "title": "Questão de Checkpoint",
-        "comment": "questões para validar finalização do Roteiro 1",
-        "questions": [
-          {
-            "numberChoose": 5,
-            "autoPoints": 40,
-            "alternatives": [
-              { "id": "arguicao/check" }
-            ]
-          }
-        ]
-      }, 
-      {
         "title": "Questão de infraestrtutura",
         "comment": "Questões para validar conhecimentos de infraestrutura",
         "questions": [
           {
-            "numberChoose": 2,
-            "autoPoints": 10,
+            "numberChoose": 3,
+            "autoPoints": 15,
             "alternatives": [
               { "id": "inquiry/baremetal/what_is" },
               { "id": "inquiry/main/hostname" },
@@ -50,8 +37,8 @@
         "comment": "Questões para validar conhecimentos de teoria",
         "questions": [
           {
-            "numberChoose": 2,
-            "autoPoints": 10,
+            "numberChoose": 3,
+            "autoPoints": 15,
             "alternatives": [
               { "id": "lec/stack/layer_order" },
               { "id": "lec/stack/layer_functions" },
