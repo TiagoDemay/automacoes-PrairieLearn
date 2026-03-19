@@ -6,25 +6,12 @@
   "number": "2",
   "allowAccess": [
   ],
-  "zones": [
-    {
-      "title": "Questão de Checkpoint",
-      "comment": "questões para validar finalização do Roteiro 2",
-      "questions": [
-        {
-          "numberChoose": 5,
-          "autoPoints": 40,
-          "alternatives": [
-            { "id": "arguicao/check" }
-          ]
-        }
-      ]
-    },   
+  "zones": [ 
     {
       "title": "Questão de infraestrtutura",
       "comment": "Questões para validar conhecimentos de infraestrutura",
       "questions": [
-        { "numberChoose": 2, "autoPoints": 10, "alternatives": [
+        { "numberChoose": 3, "autoPoints": 15, "alternatives": [
           { "id": "inquiry/juju/used_for" },
           { "id": "inquiry/juju/install_pre_maas" },
           { "id": "inquiry/juju/install_command" },
@@ -44,10 +31,7 @@
       "title": "Questão de teoria",
       "comment": "Questões para validar conhecimentos de teoria",
       "questions": [
-        {
-          "numberChoose": 2,
-          "autoPoints": 10,
-          "alternatives": [
+        { "numberChoose": 3, "autoPoints": 15, "alternatives": [
             { "id": "lab/ipv4/binary" },
             { "id": "lab/ipv4/prefix" },
             { "id": "lab/ipv4/add_net" },
