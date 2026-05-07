@@ -34,8 +34,7 @@
             { "id": "lab/arp/req_reply_fields" },
             { "id": "lab/arp/updates" },
             { "id": "lab/bridge/address" },
-            { "id": "lab/bridge/frame_seq" },
-            { "id": "lab/bridge/segment" }            
+            { "id": "lab/bridge/frame_seq" }           
           ]
         }
       ]
