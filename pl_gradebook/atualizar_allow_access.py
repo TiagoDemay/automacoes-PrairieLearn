@@ -35,8 +35,8 @@ def atualizar_allow_access(exam_path, aprovados_path, output_path):
         if email and not aluno_ja_listado(email, allow_list):
             bloco = {
                 "uids": [email],
-                "startDate": "2026-02-02T08:00:00",
-                "endDate": "2026-05-25T15:00:00",
+                "startDate": "2026-08-02T08:00:00",
+                "endDate": "2026-11-30T15:00:00",
                 "password": gerar_senha_aleatoria(),
                 "timeLimitMin": 20,
                 "credit": 100
