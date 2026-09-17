@@ -108,9 +108,9 @@ if __name__ == "__main__":
     #
     exams = {
         1: "c22bcdc7-087b-45e7-9096-caf862929987",
-        2: "COLOQUE-AQUI-O-UUID-DO-QUIZ-02",
-        3: "COLOQUE-AQUI-O-UUID-DO-QUIZ-03",
-        4: "COLOQUE-AQUI-O-UUID-DO-QUIZ-04"
+        2: "8feefef2-dac0-4a80-a2a5-9c95240e315d",
+        3: "55c6bb7b-f2ff-49b6-a706-90e3a66821af",
+        4: "6478b28a-1a74-4033-8a66-75d37ecb4718"
     }
 
     for modulo, exam_uuid in exams.items():
