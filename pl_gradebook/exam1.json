@@ -77,7 +77,16 @@
             ]
           }
         ]
-      }
+      },
+      {
+      "title": "Questionário - infra - percepção",
+      "questions": [
+        {
+          "id": "quizInfra",
+          "points": 0
+        }
+      ]
+    }
     ]
   }
   
