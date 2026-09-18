@@ -12,12 +12,17 @@ def salvar_json(dados, caminho):
         json.dump(dados, f, indent=2, ensure_ascii=False)
 
 
-def aluno_ja_listado(uid, allow_list):
+def aluno_ja_listado(uid, allow_list, exam_uuid):
     """
-    Verifica se o aluno já está presente no allowAccess.
+    Verifica se o aluno já possui o bloco de acesso ao exame
+    correspondente no PrairieTest.
     """
+
     for bloco in allow_list:
-        if uid in bloco.get("uids", []):
+        if (
+            uid in bloco.get("uids", [])
+            and bloco.get("examUuid") == exam_uuid
+        ):
             return True
 
     return False
@@ -33,8 +38,11 @@ def atualizar_allow_access(
     Adiciona ao allowAccess apenas os alunos aprovados
     que ainda não estão cadastrados.
 
-    Cada aluno será associado ao exame correspondente
-    no PrairieTest através do examUuid.
+    Para cada aluno, são criados dois blocos:
+
+    1. Bloco de acesso ao exame via PrairieTest.
+    2. Bloco de acesso inativo fora do PrairieTest,
+       impedindo a visualização do assessment fechado.
     """
 
     if not os.path.exists(aprovados_path):
@@ -63,18 +71,28 @@ def atualizar_allow_access(
             print("Aluno sem e-mail encontrado. Ignorando...")
             continue
 
-        # Evita adicionar novamente quem já foi liberado
-        if aluno_ja_listado(email, allow_list):
-            print(f"{email} já possui acesso.")
+        # Evita adicionar novamente quem já possui
+        # o acesso correspondente a este exame
+        if aluno_ja_listado(email, allow_list, exam_uuid):
+            print(f"{email} já possui acesso ao QUIZ.")
             continue
 
-        bloco = {
+        # Bloco que permite acesso ao exame via PrairieTest
+        bloco_exame = {
             "uids": [email],
             "examUuid": exam_uuid,
             "credit": 100
         }
 
-        novos_blocos.append(bloco)
+        # Bloco que impede acesso fora do contexto do exame
+        bloco_fechado = {
+            "uids": [email],
+            "active": False,
+            "showClosedAssessment": False
+        }
+
+        novos_blocos.append(bloco_exame)
+        novos_blocos.append(bloco_fechado)
 
         print(f"Liberando acesso para: {email}")
 
@@ -82,8 +100,10 @@ def atualizar_allow_access(
 
         exam_data["allowAccess"].extend(novos_blocos)
 
+        quantidade_alunos = len(novos_blocos) // 2
+
         print(
-            f"{len(novos_blocos)} novos alunos adicionados "
+            f"{quantidade_alunos} novos alunos adicionados "
             f"a {os.path.basename(exam_path)}."
         )
 
@@ -102,10 +122,6 @@ def atualizar_allow_access(
 if __name__ == "__main__":
 
     # UUID de cada exame criado no PrairieTest
-    #
-    # IMPORTANTE:
-    # Cada Quiz deve possuir o seu próprio examUuid.
-    #
     exams = {
         1: "c22bcdc7-087b-45e7-9096-caf862929987",
         2: "8feefef2-dac0-4a80-a2a5-9c95240e315d",
