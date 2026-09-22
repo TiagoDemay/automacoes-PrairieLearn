@@ -66,8 +66,18 @@
           { "id": "inquiry/openstack/app_high_demand" },
           { "id": "inquiry/openstack/app_cost" },
           { "id": "inquiry/openstack/app_private_cloud" }
-        ] }
+          ]
+          }
+        ]
+      },
+      {
+      "title": "Questionário - infra - percepção",
+      "questions": [
+        {
+          "id": "quizInfra",
+          "points": 0
+        }
       ]
     }
-  ]
-}
+    ]
+  }
