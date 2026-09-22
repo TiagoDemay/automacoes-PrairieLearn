@@ -64,8 +64,18 @@
           { "id": "inquiry/juju/app_grafana_prometheus" },
           { "id": "inquiry/juju/app_grafana_access" },
           { "id": "inquiry/juju/integrate_used_for" }
-        ] }
+          ]
+          }
+        ]
+      },
+      {
+      "title": "Questionário - infra - percepção",
+      "questions": [
+        {
+          "id": "quizInfra",
+          "points": 0
+        }
       ]
     }
-  ]
-}
+    ]
+  }
