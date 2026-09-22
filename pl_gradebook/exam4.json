@@ -49,8 +49,18 @@
           { "id": "inquiry/openstack/terraform_network_tf" },
           { "id": "inquiry/openstack/security_group_ssh_icmp" },
           { "id": "inquiry/openstack/terraform_keypair" }
-        ] }
+          ]
+          }
+        ]
+      },
+      {
+      "title": "Questionário - infra - percepção",
+      "questions": [
+        {
+          "id": "quizInfra",
+          "points": 0
+        }
       ]
     }
-  ]
-}
+    ]
+  }
